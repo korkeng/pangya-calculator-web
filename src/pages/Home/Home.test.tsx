@@ -1,9 +1,8 @@
 import React from 'react'
-import { render, screen } from '@testing-library/react';
+import { render } from '@testing-library/react';
 import Home from './Home';
 
-test('renders learn react link', () => {
-  render(<Home />);
-  const linkElement = screen.getByText(/Hello World/i);
-  expect(linkElement).toBeInTheDocument();
+test('renders Home page was correctly', () => {
+  const tree = render(<Home />);
+  expect(tree).toMatchSnapshot();
 });
